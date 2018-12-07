@@ -22,8 +22,12 @@ defmodule Day4Test do
   [1518-11-05 00:45] falls asleep
   """
 
-  test "find sleepiest guard/hour product" do
+  test "find sleepiest leader then the product of id x sleepiest minute" do
     assert @unsorted_hours |> Day4.sleepiest_guard_minute_product() == 240
+  end
+
+  test "find sleepiest minute leader of all and product of id X minute" do
+    assert @unsorted_hours |> Day4.sleepiest_minute_leader_product() == 4455
   end
 
 end
