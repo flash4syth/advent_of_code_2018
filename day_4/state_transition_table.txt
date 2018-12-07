@@ -1,0 +1,25 @@
+State Transition Table for Elf Guard Schedule
+
+State | bs | wu | fa 
+start:| aw | xx | xx
+aw    | aw | xx | as
+as    | aw | aw | xx
+end   | xx | xx | xx
+
+state can be machine state or object state
+
+key:
+bs -> Begins shift
+wu -> Wakes up
+fa -> Falls asleep
+aw -> Awake
+as -> Asleep
+xx -> no transition or impossible event in this state
+
+what needs to be kept track of in the object state?
+stats for individual guards which are:
+total hours awake :: int
+total hours sleeping :: int
+tally_of_hours_worked :: %{hour -> count}
+guard id
+current_state
